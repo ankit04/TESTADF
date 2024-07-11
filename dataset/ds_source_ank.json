@@ -1,0 +1,49 @@
+{
+	"name": "ds_source_ank",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_ank",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "OfficeDataProject.csv",
+				"fileSystem": "test"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EMPLOYEE NAME",
+				"type": "String"
+			},
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "JOINING DATE",
+				"type": "String"
+			},
+			{
+				"name": "DESIGNATION",
+				"type": "String"
+			},
+			{
+				"name": "DEPARTMENT",
+				"type": "String"
+			},
+			{
+				"name": "MOBILE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
