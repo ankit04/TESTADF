@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ankitadfbt12"
+		},
+		"ls_FileServer1_password": {
+			"value": ""
+		},
+		"ls_shir_accountKey": {
+			"value": ""
+		},
+		"ls_sink_ank_accountKey": {
+			"value": ""
+		},
+		"ls_source_ank_accountKey": {
+			"value": ""
+		},
+		"ls_sp_logpl_ank_password": {
+			"value": ""
+		},
+		"ls_FileServer1_properties_typeProperties_host": {
+			"value": "C:\\Users\\Ankit Raj\\OneDrive\\Desktop\\DE"
+		},
+		"ls_FileServer1_properties_typeProperties_userId": {
+			"value": "Ankit Raj"
+		},
+		"ls_shir_properties_typeProperties_url": {
+			"value": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_sink_ank_properties_typeProperties_url": {
+			"value": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_source_ank_properties_typeProperties_url": {
+			"value": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_server": {
+			"value": "devnegiserver1.database.windows.net"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_database": {
+			"value": "devdatabase"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_userName": {
+			"value": "deepakadmin"
+		}
+	}
+}

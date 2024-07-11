@@ -1,0 +1,133 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ankitadfbt12"
+		},
+		"ls_FileServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_FileServer1'"
+		},
+		"ls_shir_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_shir'"
+		},
+		"ls_sink_ank_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_sink_ank'"
+		},
+		"ls_source_ank_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_source_ank'"
+		},
+		"ls_sp_logpl_ank_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_sp_logpl_ank'"
+		},
+		"ls_FileServer1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Users\\Ankit Raj\\OneDrive\\Desktop\\DE"
+		},
+		"ls_FileServer1_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "Ankit Raj"
+		},
+		"ls_shir_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_sink_ank_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_source_ank_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ankitadls2.dfs.core.windows.net/"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "devnegiserver1.database.windows.net"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "devdatabase"
+		},
+		"ls_sp_logpl_ank_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "deepakadmin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ankitadfbt12_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_shir_accountKey": {
+						"value": "[parameters('ls_shir_accountKey')]"
+					},
+					"ls_sink_ank_accountKey": {
+						"value": "[parameters('ls_sink_ank_accountKey')]"
+					},
+					"ls_source_ank_accountKey": {
+						"value": "[parameters('ls_source_ank_accountKey')]"
+					},
+					"ls_sp_logpl_ank_password": {
+						"value": "[parameters('ls_sp_logpl_ank_password')]"
+					},
+					"ls_FileServer1_password": {
+						"value": "[parameters('ls_FileServer1_password')]"
+					},
+					"ls_shir_properties_typeProperties_url": {
+						"value": "[parameters('ls_shir_properties_typeProperties_url')]"
+					},
+					"ls_sink_ank_properties_typeProperties_url": {
+						"value": "[parameters('ls_sink_ank_properties_typeProperties_url')]"
+					},
+					"ls_source_ank_properties_typeProperties_url": {
+						"value": "[parameters('ls_source_ank_properties_typeProperties_url')]"
+					},
+					"ls_sp_logpl_ank_properties_typeProperties_server": {
+						"value": "[parameters('ls_sp_logpl_ank_properties_typeProperties_server')]"
+					},
+					"ls_sp_logpl_ank_properties_typeProperties_database": {
+						"value": "[parameters('ls_sp_logpl_ank_properties_typeProperties_database')]"
+					},
+					"ls_sp_logpl_ank_properties_typeProperties_userName": {
+						"value": "[parameters('ls_sp_logpl_ank_properties_typeProperties_userName')]"
+					},
+					"ls_FileServer1_properties_typeProperties_host": {
+						"value": "[parameters('ls_FileServer1_properties_typeProperties_host')]"
+					},
+					"ls_FileServer1_properties_typeProperties_userId": {
+						"value": "[parameters('ls_FileServer1_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
