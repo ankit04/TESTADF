@@ -1,0 +1,49 @@
+{
+	"name": "ds_sql_scd1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_scd1_sql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "employee_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "employee_name",
+				"type": "varchar"
+			},
+			{
+				"name": "department",
+				"type": "varchar"
+			},
+			{
+				"name": "state",
+				"type": "varchar"
+			},
+			{
+				"name": "salary",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "age",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "bonus",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp_scd1"
+		}
+	}
+}
