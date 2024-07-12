@@ -2,7 +2,7 @@
 	"name": "ds_source_ank",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_source_ank",
+			"referenceName": "ls_sink_scd2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -20,31 +20,27 @@
 		},
 		"schema": [
 			{
-				"name": "employee_id",
+				"name": "EMPLOYEE NAME",
 				"type": "String"
 			},
 			{
-				"name": "employee_name",
+				"name": "ID",
 				"type": "String"
 			},
 			{
-				"name": "department",
+				"name": "JOINING DATE",
 				"type": "String"
 			},
 			{
-				"name": "state",
+				"name": "DESIGNATION",
 				"type": "String"
 			},
 			{
-				"name": "salary",
+				"name": "DEPARTMENT",
 				"type": "String"
 			},
 			{
-				"name": "age",
-				"type": "String"
-			},
-			{
-				"name": "bonus",
+				"name": "MOBILE",
 				"type": "String"
 			}
 		]
