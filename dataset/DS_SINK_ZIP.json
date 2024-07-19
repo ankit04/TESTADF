@@ -1,8 +1,8 @@
 {
-	"name": "ds_source_ank",
+	"name": "DS_SINK_ZIP",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_sink_scd2",
+			"referenceName": "LS_SINK2_ZIP",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,40 +10,44 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "EMPLOYEE1.csv",
-				"fileSystem": "test"
+				"fileSystem": "second"
 			},
 			"columnDelimiter": ",",
+			"compressionCodec": "ZipDeflate",
+			"compressionLevel": "Optimal",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "EMPLOYEE NAME",
+				"name": "employee_id",
 				"type": "String"
 			},
 			{
-				"name": "ID",
+				"name": "employee_name",
 				"type": "String"
 			},
 			{
-				"name": "JOINING DATE",
+				"name": "department",
 				"type": "String"
 			},
 			{
-				"name": "DESIGNATION",
+				"name": "state",
 				"type": "String"
 			},
 			{
-				"name": "DEPARTMENT",
+				"name": "salary",
 				"type": "String"
 			},
 			{
-				"name": "MOBILE",
+				"name": "age",
+				"type": "String"
+			},
+			{
+				"name": "bonus",
 				"type": "String"
 			}
 		]
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
