@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "OfficeDataProject.csv",
-				"fileSystem": "second"
+				"fileName": "EMPLOYEE1.csv",
+				"fileSystem": "test"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
